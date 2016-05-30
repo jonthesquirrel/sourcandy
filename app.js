@@ -6,8 +6,8 @@ var App = (function() {
     element.style.position = "fixed"
     element.style.border = `5px solid ${randomColor()}`
     element.setPos = function setPos(x, y) {
-      element.style.top = `${x}px`
-      element.style.left = `${y}px`
+      element.style.left = `${x}px`
+      element.style.top = `${y}px`
     }
     return element
   }
@@ -22,6 +22,28 @@ var App = (function() {
     var color = new RColor
     return color.get(true)
   }
+
+  document.body.addEventListener("mousedown", function(event) {
+    if (event.target == document.body) {
+      App.spawn(event.clientX, event.clientY)
+    }
+  })
+
+  document.body.addEventListener("touchstart", function(event) {
+    if (event.target == document.body) {
+      // event.targetTouches.forEach(function(touch) {
+      //   App.spawn(touch.clientX, touch.clientY)
+      // })
+      // ^BROKEN
+      // for (var touch of event.targetTouches) {
+      //   App.spawn(touch.clientX, touch.clientY)
+      // }
+      // ^BROKEN
+      [].forEach.call(event.targetTouches, function(touch) {
+        App.spawn(touch.clientX, touch.clientY)
+      })
+    }
+  })
 
   return App
 })()
