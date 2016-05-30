@@ -1,6 +1,7 @@
 
 body {
   background: black;
+  font-family: monospace;
   margin: 0;
   padding: 0;
   position: fixed;
@@ -8,4 +9,20 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+#footer {
+  background: #353b41;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  padding: .5em;
+}
+
+#footer:hover {
+  background: #485157;
 }
