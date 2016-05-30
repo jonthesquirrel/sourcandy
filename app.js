@@ -21,6 +21,9 @@ var App = (function() {
     document.body.appendChild(element)
   }
 
+  // TODO momentum. how is speed determined?
+  // TODO pitch is affected by where square hits on wall? should square color change to match place it hit (and walls are colored with a rainbow gradient)?
+
   var randomColor = function randomColor() {
     var color = new RColor
     return color.get(true)
@@ -34,14 +37,6 @@ var App = (function() {
 
   document.body.addEventListener("touchstart", function(event) {
     if (event.target == document.body) {
-      // event.targetTouches.forEach(function(touch) {
-      //   App.spawn(touch.clientX, touch.clientY)
-      // })
-      // ^BROKEN
-      // for (var touch of event.targetTouches) {
-      //   App.spawn(touch.clientX, touch.clientY)
-      // }
-      // ^BROKEN
       [].forEach.call(event.targetTouches, function(touch) {
         App.spawn(touch.clientX, touch.clientY)
       })
