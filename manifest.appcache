@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# UPDATED 1464604876
+# UPDATED 1464608758
 
 CACHE:
 app.js
@@ -7,6 +7,7 @@ icon.png
 icon-solid.png
 index.html
 manifest.json
+rcolor.js
 style.css
 
 NETWORK:
