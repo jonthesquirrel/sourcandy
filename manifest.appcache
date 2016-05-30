@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# UPDATED 1464604876
+
+CACHE:
+app.js
+icon.png
+icon-solid.png
+index.html
+manifest.json
+style.css
+
+NETWORK:
+*
+
+# TODO transition to service worker in the future
